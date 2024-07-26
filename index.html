@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Hệ Thống Quản Lý Sinh Viên</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center m-3">
+        <div class="div1">
+            <img class="anh-logo" src="img/logo-rikkei2.png" alt="Logo">
+            <p>Để nông dân biết code</p>
+        </div>
+        <div class="div2">
+            <h1>HỆ THỐNG QUẢN LÝ SINH VIÊN</h1>
+        </div>
+        <div class="div3">
+            <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="dangXuat()">Đăng xuất</a>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 main-left vh-100 p-5">
+                <ul class="list-group list-group-numbered">
+                    <li class="list-group-item" onclick="renderDashboard()">Bảng điều khiển</li>
+                    <li class="list-group-item" onclick="renderClass()">Quản lý khoá học</li>
+                    <li class="list-group-item disabled" onclick="renderStuDent()">Quản lý lớp học</li>
+                    <li class="list-group-item disabled" onclick="renderquanLLop()">Quản lý sinh viên</li>
+                    <li class="list-group-item disabled">Quản lý tài khoản</li>
+                </ul>
+            </div>
+            <div class="col-lg-9 p-5 main-right vh-100" id="mainContent">
+                <!-- Default content will be injected here -->
+            </div>
+        </div>
+    </main>
+    <main>
+        <button  type="button" class="btn btn-primary">Prew</button>
+        <button type="button" class="btn btn-secondary" onclick="renderDashboard()"></button>1</button>
+        <button type="button" class="btn btn-success">2</button>
+        <button type="button" class="btn btn-danger">3</button>
+        <button type="button" class="btn btn-warning">4</button>
+        <button type="button" class="btn btn-info">5</button>
+        <button type="button" class="btn btn-light">6</button>
+        <button type="button" class="btn btn-dark">7</button>
+        <button type="button" class="btn btn-link">next</button>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+    <!-- Add New Modal -->
+    <div class="modal fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addNewModalLabel">Thêm Tài Khoản Mới</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addNewForm">
+                        <div class="mb-3">
+                            <label for="newEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="newEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="newPassword" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="addNewAccount()">Thêm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderDashboard(); // Default view
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderClass(); // Default view
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderStuDent(); // Default view
+        });
+    </script>
+   
+
+    
+</body>
+</html>
